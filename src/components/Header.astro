@@ -3,7 +3,6 @@ import {type HeaderNav} from '../interface/interfaces.ts'
 interface Props{
     header?:Array<HeaderNav>;
 }
-
 const { header } = Astro.props
 ---
 <header class={!header ? `
@@ -16,6 +15,9 @@ const { header } = Astro.props
     sticky top-0 z-10
     bg-secondary text-primary
     font-bold`}>
+    <a href="/">
+        <img src="/img/logoPrimary.png" class="w-14 absolute ml-10 top-0 left-0" alt="">
+    </a>
     {!header ? (
         <ul id="navMenu" class="flex w-full items-center justify-center 
             gap-x-4 p-4">

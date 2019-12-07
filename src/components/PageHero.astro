@@ -1,0 +1,33 @@
+---
+import Pill from '../components/Pill.astro';
+import Whatsapp from '../components/icons/Whatsapp.astro';
+
+interface Props{
+    title:string;
+    subTitle:string;
+    text:string;
+}
+
+const {title, subTitle, text} = Astro.props
+---
+
+<article class="w-2/3 my-20 lg:my-10 p-10 bg-primary text-secondary relative">
+    <h1 class="text-3xl lg:text-6xl font-bold lg:pr-20">
+        {title}
+    </h1>
+    <h2 class="w-fit text-normal lg:text-3xl font-medium text-primary bg-emerald-300 
+        my-4 lg:my-10 lg:mr-20 py-2 px-4 lg:px-8">
+        {subTitle}
+    </h2>
+    <p class="text-sm lg:text-2xl lg:pr-20 text-pretty">
+        {text}
+    </p>
+    <div class="flex items-start mt-10">
+        <Pill href="https://wa.me/584122010421?text=Me%20gustaria%20obtener%20mas%20informacion%20de%20sus%20servicios" 
+        id="whatsappPill">
+            <span class="lg:hidden text-xl">Contacta</span>
+            <span class="hidden lg:flex text-xl">Contacta con un especialista</span>
+            <Whatsapp class="size-6 "/>
+        </Pill>
+    </div>
+</article>
