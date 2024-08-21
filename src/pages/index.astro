@@ -1,0 +1,159 @@
+---
+import Section from '../components/Section.astro';
+import Layout from '../layouts/Layout.astro';
+import Pill from '../components/Pill.astro';
+import Whatsapp from '../components/icons/Whatsapp.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import Footer from '../components/Footer.astro'
+---
+
+<Layout title="siembra.co">
+    <Section id='inicio' classList='flex flex-col lg:flex-row py-20 lg:py-40 px-10 lg:px-4'>
+        <article class="lg:w-2/3">
+            <h2 class="text-5xl text-pretty text-primary font-bold mb-4">
+                Transformamos tus ideas en productos digitales de impacto
+            </h2>
+            <p class="lg:block text-pretty">
+                Combinamos estrategia y diseño con excelencia en el desarrollo de software para construir productos digitales únicos. Nuestro proceso de extremo a extremo nos permite cocrear soluciones innovadoras de forma ágil e incremental.
+            </p>
+        </article>
+        <div class="flex lg:block lg:p-6 my-4 lg:my-0">
+            <Pill href="https://wa.me/584122010421?text=Me%20gustaris%20obtener%20mas%20informacion%20de%20sus%20servicios" 
+            id="whatsappPill">
+                Whatsapp
+                <Whatsapp class="size-6 "/>
+            </Pill>
+        </div>
+    </Section>
+    <Section id='servicios' classList="flex items-center flex-wrap text-primary gap-x-6 px-10">
+        <span class="text-sm bg-primary text-secondary rounded-full px-3 py-1 mt-2">
+            SERVICIOS</span>
+        </span>
+        <h2 class="text-5xl font-black py-4">Lo que ofrecemos</h2>
+        <p class="w-full text-xl">
+            Reunimos las mejores prácticas para guiar a nuestros clientes en sus desafíos de creación y desarrollo de software de forma ágil, incremental y colaborativa.
+        </p>
+        <ServiceCard 
+            title='Estrategia de diseño' 
+            text='Defina y valide soluciones únicas y centradas en el usuario que den como resultado productos viables con un alto poder de participación. Respaldamos todo, desde la investigación hasta el lanzamiento de su solución con nuestras capacidades avanzadas de diseño y estrategia.'
+            nav={[ 
+                { 
+                    text: 'Diseño para la transformación digital', 
+                    ref:'disenioTransformacion' 
+                },
+                { 
+                    text: 'Diseño de productos digitales', 
+                    ref:'disenioProductos' 
+                },
+                { 
+                    text: 'Estudio de mercado', 
+                    ref:'estudioMercado' 
+                }
+            ]}/>
+        <ServiceCard 
+        title='Desarrollo de software' 
+        text='Entrega valor a tus clientes de forma ágil e incremental, en continua interacción con los usuarios y el mercado. Desarrollar y modernizar aplicaciones, plataformas, sistemas y soluciones de datos con equipos multidisciplinarios o outsourcing.'
+        nav={[ 
+            { 
+                text: 'Desarrollo de software', 
+                ref:'desarrolloSoftware' 
+            },
+            { 
+                text: 'Soporte de software', 
+                ref:'soporteSoftware' 
+            },
+            { 
+                text: 'Modernizacion de software', 
+                ref:'modernizacionSoftware' 
+            },
+            {
+                text: 'Outsourcing', 
+                ref:'outsourcing'
+            }
+        ]}/>
+    </Section>
+    <section id='contacto' class='w-full flex flex-col text-primary pt-10 m-0'>
+        <div class="w-full flex items-center gap-x-6 px-10">
+            <span class="text-sm bg-primary text-secondary rounded-full px-3 py-1 mt-2">
+                CONTACTO
+            </span>
+            <h2 class="text-5xl font-black py-4">
+                ¿Hablemos de tus proyectos?
+            </h2>
+        </div>
+        <article class="w-full flex justify-between bg-primary text-secondary py-14 px-10 mt-4 ">
+            <p class="w-1/3 text-lg text-pretty">
+                ¿Quiere saber más sobre cómo trabajamos, hablar sobre sus desafíos o hacer preguntas? Habla con nosotros. ¡Nos encanta intercambiar ideas sobre productos digitales!
+                <br><br>
+                Ponte en contacto y conoce la forma suave de desarrollar software.
+            </p>
+            <form class="w-1/2 flex flex-wrap justify-between">
+                <div>
+                    <label for="nombre" 
+                        class="block font-medium ">
+                        Nombre completo*
+                    </label>
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-72 p-2.5" 
+                        required 
+                        type="text" 
+                        name="nombre" 
+                        id="">
+                </div>
+                <div>
+                    <label for="cargo" class="block font-medium ">
+                        Cargo*
+                    </label>
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-full p-2.5" 
+                        type="text" 
+                        name="cargo" 
+                        id="">
+                </div>
+                <div>
+                    <label for="nombreEmpresa" 
+                        class="block font-medium ">
+                        Nombre de la empresa*
+                    </label>
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-72 p-2.5" 
+                        type="text" 
+                        name="nombreEmpresa" 
+                        id="">
+                </div>
+                <div>
+                    <label for="areaMercado" 
+                        class="block font-medium ">
+                        Area de mercado*
+                    </label>
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-full p-2.5"  
+                        type="text" 
+                        name="areaMercado" 
+                        id="">
+                </div>
+                <div>
+                    <label for="email" 
+                        class="block font-medium ">
+                        E-mail*
+                    </label>
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-72 p-2.5" 
+                        type="text" 
+                        name="email" 
+                        id="">
+                </div>
+                <div>
+                    <label for="telefono" class="block font-medium ">
+                        Telefono*
+                    </label>
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-full p-2.5"
+                        type="text" 
+                        name="telefono" 
+                        id="">
+                </div>
+            </form>
+        </article>
+    </section>
+    <Footer>
+
+    </Footer>
+</Layout>
+<!-- 
+<select class="field" name="Cargos" id="office-modal-contato-geral .softdesign-form" required=""><option value="" disabled="" selected="" hidden=""></option><option value="Diretor(a) de Tecnologia – TI">Diretor de Tecnologia – TI</option><option value="Coordenador(a) de Tecnologia – TI">Coordenador(a) de Tecnologia – TI</option><option value="Analista de Tecnologia – TI">Analista de Tecnologia – TI</option><option value="Diretor(a) Comercial">Diretor(a) Comercial</option><option value="Coordenador(a) Comercial">Coordenador(a) Comercial</option><option value="Analista Comercial">Analista Comercial</option><option value="Diretor(a) de Marketing">Diretor(a) de Marketing</option><option value="Coordenador(a) de Marketing">Coordenador(a) de Marketing</option><option value="Analista de Marketing">Analista de Marketing</option><option value="Diretor(a) de Operações">Diretor(a) de Operações</option><option value="Coordenador(a) de Operações">Coordenador(a) de Operações</option><option value="Técnico de Operações">Técnico de Operações</option><option value="Diretor(a) de Compras">Diretor(a) de Compras</option><option value="Coordenador(a) de Compras">Coordenador(a) de Compras</option><option value="Analista de Compras">Analista de Compras</option><option value="Diretor(a) de Inovação">Diretor(a) de Inovação</option><option value="Coordenador(a) de Inovação">Coordenador(a) de Inovação</option><option value="Analista de Negócios">Analista de Negócios</option><option value="CEO/Founder/Partner">CEO/Founder/Partner</option><option value="Estudante/Estagiário(a)">Estudante/Estagiário(a)</option><option value="Outros Cargos">Outros Cargos</option> </select> -->
+<!-- <select class="field" name="mercado" id="market-modal-contato-geral .softdesign-form" required=""><option value="" disabled="" selected="" hidden=""></option><option value="Agricultura e Pecuária">Agricultura e Pecuária</option><option value="Alimentos e Bebidas">Alimentos e Bebidas</option><option value="Automotivo">Automotivo</option><option value="Comércio Atacado e Varejo">Comércio Atacado e Varejo</option><option value="Comércio Exterior">Comércio Exterior</option><option value="Construção Civil e Imobiliário">Construção Civil e Imobiliário</option><option value="Cooperativa de Produção">Cooperativa de Produção</option><option value="Couro e Calçados">Couro e Calçados</option><option value="Educação">Educação</option><option value="Energia">Energia</option><option value="Financeiro">Financeiro</option><option value="Madeira, Papel e Celulose">Madeira, Papel e Celulose</option><option value="Marketing e Comunicação">Marketing e Comunicação</option><option value="Metal Mecânico e Metalurgia">Metal Mecânico e Metalurgia</option><option value="Móveis">Móveis</option><option value="Plástico e Borracha">Plástico e Borracha</option><option value="Química e Petroquímica">Química e Petroquímica</option><option value="Saúde">Saúde</option><option value="Serviços">Serviços</option><option value="Serviços Públicos">Serviços Públicos</option><option value="Siderurgia e Mineração">Siderurgia e Mineração</option><option value="Tecnologia da Informação">Tecnologia da Informação</option><option value="Telecom">Telecom</option><option value="Têxtil e Confecções">Têxtil e Confecções</option><option value="Transporte e Logística">Transporte e Logística</option><option value="Turismo">Turismo</option><option value="Veterinário">Veterinário</option><option value="Outro">Outro</option> </select> -->

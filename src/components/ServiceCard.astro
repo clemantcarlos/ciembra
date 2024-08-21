@@ -1,0 +1,29 @@
+---
+interface Item{
+    text:string;
+    classList?:string;
+    ref:string;
+}
+
+interface Props{
+    title?: string;
+    text?: string;
+    nav: Array <Item>;
+}
+
+const { title, text, nav }= Astro.props 
+---
+<article class="w-full flex bg-primary text-secondary rounded p-6 my-4">
+    <div class="w-1/2">
+        <h3 class="text-3xl font-bold mb-6">{title}</h3>
+        <p class="text-lg text-pretty">{text}</p>
+    </div>
+    <nav class="w-1/2 flex flex-col pl-20 font-bold text-xl">
+        {nav.map( item => (
+            <a class={'py-2 my-2 border-b border-secondary hover:text-emerald-500 transition-all ' + item.classList} 
+                href={item.ref}>
+                {item.text}
+            </a>
+        ))}
+    </nav>
+</article>
