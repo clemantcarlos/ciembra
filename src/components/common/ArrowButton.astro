@@ -1,0 +1,21 @@
+---
+import RightArrow from '../icons/RightArrow.astro';
+
+interface Props{
+    label:string;
+    type: 'submit' | 'reset' | 'button' | undefined | null;
+}
+
+const { label, type} = Astro.props
+---
+<button class="flex items-center px-4 py-2 text-xl font-bold bg-secondary text-primary rounded-full sendButton" type={type}>
+    <span class="rounded-full bg-primary mr-4 text-secondary transition-all">
+        <RightArrow  class="size-8"/>
+    </span> 
+    {label}
+</button>
+<style>
+    .sendButton:hover span{
+        @apply translate-x-1
+    }
+</style>

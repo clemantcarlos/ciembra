@@ -1,4 +1,5 @@
 ---
+import ArrowButton from './common/ArrowButton.astro';
 interface Item{
     text:string;
     classList?:string;
@@ -11,14 +12,15 @@ interface Props{
     nav: Array <Item>;
 }
 
+
 const { title, text, nav }= Astro.props 
 ---
-<article class="w-full flex bg-primary text-secondary rounded p-6 my-4">
-    <div class="w-1/2">
+<article class="w-full flex flex-col md:flex-row bg-primary text-secondary rounded p-6 my-4">
+    <div class="w-full md:w-1/2">
         <h3 class="text-3xl font-bold mb-6">{title}</h3>
         <p class="text-lg text-pretty">{text}</p>
     </div>
-    <nav class="w-1/2 flex flex-col pl-20 font-bold text-xl">
+    <nav class="hidden w-1/2 md:flex flex-col pl-20 font-bold text-xl">
         {nav.map( item => (
             <a class={'py-2 my-2 border-b border-secondary hover:text-emerald-500 transition-all ' + item.classList} 
                 href={item.ref}>
@@ -26,4 +28,7 @@ const { title, text, nav }= Astro.props
             </a>
         ))}
     </nav>
+    <div class="w-full pt-4 md:hidden">
+       <ArrowButton label="mas informacion" type='button'/>
+    </div>
 </article>
