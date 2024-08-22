@@ -5,6 +5,7 @@ import Pill from '../components/Pill.astro';
 import Whatsapp from '../components/icons/Whatsapp.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import Footer from '../components/Footer.astro'
+import RightArrow from '../components/icons/RightArrow.astro';
 ---
 
 <Layout title="siembra.co">
@@ -82,18 +83,18 @@ import Footer from '../components/Footer.astro'
             </h2>
         </div>
         <article class="w-full flex justify-between bg-primary text-secondary py-14 px-10 mt-4 ">
-            <p class="w-1/3 text-lg text-pretty">
+            <p class="w-full lg:w-1/3 text-lg text-pretty">
                 ¿Quiere saber más sobre cómo trabajamos, hablar sobre sus desafíos o hacer preguntas? Habla con nosotros. ¡Nos encanta intercambiar ideas sobre productos digitales!
                 <br><br>
                 Ponte en contacto y conoce la forma suave de desarrollar software.
             </p>
-            <form class="w-1/2 flex flex-wrap justify-between">
+            <form class="w-1/2 hidden lg:flex flex-wrap justify-end gap-x-4">
                 <div>
                     <label for="nombre" 
                         class="block font-medium ">
                         Nombre completo*
                     </label>
-                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-72 p-2.5" 
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" 
                         required 
                         type="text" 
                         name="nombre" 
@@ -103,17 +104,79 @@ import Footer from '../components/Footer.astro'
                     <label for="cargo" class="block font-medium ">
                         Cargo*
                     </label>
-                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-full p-2.5" 
-                        type="text" 
-                        name="cargo" 
-                        id="">
+                    <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" name="Cargos" required="">
+                        <option value="" disabled="" selected="" hidden=""></option>
+                        <option value="Director(a) de Tecnologia – IT">
+                            Director de Tecnologia – IT
+                        </option>
+                        <option value="Coordinador(a) de Tecnologia – IT">
+                            Coordinador(a) de Tecnologia – TI
+                        </option>
+                        <option value="Analista de Tecnologia – TI">
+                            Analista de Tecnologia – TI
+                        </option>
+                        <option value="Director(a) Comercial">
+                            Director(a) Comercial
+                        </option>
+                        <option value="Coordinador(a) Comercial">
+                            Coordinador(a) Comercial
+                        </option>
+                        <option value="Analista Comercial">
+                            Analista Comercial
+                        </option>
+                        <option value="Director(a) de Marketing">
+                            Director(a) de Marketing
+                        </option>
+                        <option value="Coordinador(a) de Marketing">
+                            Coordinador(a) de Marketing
+                        </option>
+                        <option value="Analista de Marketing">
+                            Analista de Marketing
+                        </option>
+                        <option value="Director(a) de Operaciones">
+                            Director(a) de Operaciones
+                        </option>
+                        <option value="Coordinador(a) de Operaciones">
+                            Coordinador(a) de Operaciones
+                        </option>
+                        <option value="Técnico de Operaciones">
+                            Técnico de Operaciones
+                        </option>
+                        <option value="Director(a) de Compras">
+                            Director(a) de Compras
+                        </option>
+                        <option value="Coordinador(a) de Compras">
+                            Coordinador(a) de Compras
+                        </option>
+                        <option value="Analista de Compras">
+                            Analista de Compras
+                        </option>
+                        <option value="Director(a) de Innovacion">
+                            Director(a) de Innovacion
+                        </option>
+                        <option value="Coordinador(a) de Innovacion">
+                            Coordinador(a) de Innovacion
+                        </option>
+                        <option value="Analista de Negocios">
+                            Analista de Negocios
+                        </option>
+                        <option value="CEO/Fundador/Socio">
+                            CEO/Fundador/Socio
+                        </option>
+                        <option value="Estudiante/Becario(a)">
+                            Estudiante/Becario(a)
+                        </option>
+                        <option value="Otros Cargos">
+                            Otros Cargos
+                        </option> 
+                    </select>
                 </div>
                 <div>
                     <label for="nombreEmpresa" 
                         class="block font-medium ">
                         Nombre de la empresa*
                     </label>
-                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-72 p-2.5" 
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" 
                         type="text" 
                         name="nombreEmpresa" 
                         id="">
@@ -123,17 +186,100 @@ import Footer from '../components/Footer.astro'
                         class="block font-medium ">
                         Area de mercado*
                     </label>
-                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-full p-2.5"  
-                        type="text" 
-                        name="areaMercado" 
-                        id="">
+                    <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" name="mercado"  required="">
+                            <option value="" disabled="" selected="" hidden=""></option>
+                            <option value="Agropecuario">
+                                Agropecuario
+                            </option>
+                            <option value="Alimentos e Bebidas">
+                                Alimentos e Bebidas
+                            </option>
+                            <option value="Automotor">
+                                Automotor
+                            </option>
+                            <option value="Comercio mayorista y minorista">
+                                Comercio mayorista y minorista
+                            </option>
+                            <option value="Comercio Exterior">
+                                Comercio Exterior
+                            </option>
+                            <option value="Construccion civil e Imbobiliario">
+                                Construccion civil e Imbobiliario
+                            </option>
+                            <option value="Cooperativa de Produccion">
+                                Cooperativa de Produccion
+                            </option>
+                            <option value="Cuero y calzado">
+                                Cuero y calzado
+                            </option>
+                            <option value="Educacion">
+                                Educacion
+                            </option>
+                            <option value="Energia">
+                                Energia
+                            </option>
+                            <option value="Financiero">
+                                Financiero
+                            </option>
+                            <option value="Madera, papel y celulosa">
+                                Madera, papel y celulosa
+                            </option>
+                            <option value="Marketing y Comunicacion">
+                                Marketing y Comunicacion
+                            </option>
+                            <option value="Mecanica">
+                                Mecanica
+                            </option>
+                            <option value="Muebles">
+                                Muebles
+                            </option>
+                            <option value="Plastico y Caucho">
+                                Plastico y Caucho
+                            </option>
+                            <option value="Química e Petroquímica">
+                                Química e Petroquímica
+                            </option>
+                            <option value="Salud">
+                                Salud
+                            </option>
+                            <option value="Servicios">
+                                Servicios
+                            </option>
+                            <option value="Servicios Publicos">
+                                Servicios Publicos
+                            </option>
+                            <option value="Metalurgia y Mineria">
+                                Metalurgia y Mineria
+                            </option>
+                            <option value="Tecnologia de la Informacion">
+                                Tecnologia de la Informacion
+                            </option>
+                            <option value="Telecom">
+                                Telecom
+                            </option>
+                            <option value="Textil y confecciones">
+                                Textil y confecciones
+                            </option>
+                            <option value="Transporte y Logistica">
+                                Transporte y Logistica
+                            </option>
+                            <option value="Turismo">
+                                Turismo
+                            </option>
+                            <option value="Veterinario">
+                                Veterinario
+                            </option>
+                            <option value="Otro">
+                                Otro
+                            </option> 
+                    </select>
                 </div>
                 <div>
                     <label for="email" 
                         class="block font-medium ">
                         E-mail*
                     </label>
-                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-72 p-2.5" 
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" 
                         type="text" 
                         name="email" 
                         id="">
@@ -142,10 +288,25 @@ import Footer from '../components/Footer.astro'
                     <label for="telefono" class="block font-medium ">
                         Telefono*
                     </label>
-                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-full p-2.5"
+                    <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5"
                         type="text" 
                         name="telefono" 
                         id="">
+                </div>
+                <div class="w-full pl-10 pt-4">
+                    <input type="checkbox" name="privacidad" id="privacidad"/>
+                    <label for="privacidad">
+                        Estoy deacuerdo con las 
+                        <a href="politicasPrivacidad" class="font-bold text-emerald-300">Politicas de Privacidad</a>
+                    </label>
+                </div>
+                <div class="w-full pl-10 pt-4">
+                    <button class="flex items-center px-4 py-2 text-xl font-bold bg-secondary text-primary rounded-full sendButton" type="submit">
+                        <span class="rounded-full bg-primary mr-4 text-secondary transition-all">
+                            <RightArrow />
+                        </span> 
+                        Enviar
+                    </button>
                 </div>
             </form>
         </article>
@@ -154,6 +315,9 @@ import Footer from '../components/Footer.astro'
 
     </Footer>
 </Layout>
-<!-- 
-<select class="field" name="Cargos" id="office-modal-contato-geral .softdesign-form" required=""><option value="" disabled="" selected="" hidden=""></option><option value="Diretor(a) de Tecnologia – TI">Diretor de Tecnologia – TI</option><option value="Coordenador(a) de Tecnologia – TI">Coordenador(a) de Tecnologia – TI</option><option value="Analista de Tecnologia – TI">Analista de Tecnologia – TI</option><option value="Diretor(a) Comercial">Diretor(a) Comercial</option><option value="Coordenador(a) Comercial">Coordenador(a) Comercial</option><option value="Analista Comercial">Analista Comercial</option><option value="Diretor(a) de Marketing">Diretor(a) de Marketing</option><option value="Coordenador(a) de Marketing">Coordenador(a) de Marketing</option><option value="Analista de Marketing">Analista de Marketing</option><option value="Diretor(a) de Operações">Diretor(a) de Operações</option><option value="Coordenador(a) de Operações">Coordenador(a) de Operações</option><option value="Técnico de Operações">Técnico de Operações</option><option value="Diretor(a) de Compras">Diretor(a) de Compras</option><option value="Coordenador(a) de Compras">Coordenador(a) de Compras</option><option value="Analista de Compras">Analista de Compras</option><option value="Diretor(a) de Inovação">Diretor(a) de Inovação</option><option value="Coordenador(a) de Inovação">Coordenador(a) de Inovação</option><option value="Analista de Negócios">Analista de Negócios</option><option value="CEO/Founder/Partner">CEO/Founder/Partner</option><option value="Estudante/Estagiário(a)">Estudante/Estagiário(a)</option><option value="Outros Cargos">Outros Cargos</option> </select> -->
-<!-- <select class="field" name="mercado" id="market-modal-contato-geral .softdesign-form" required=""><option value="" disabled="" selected="" hidden=""></option><option value="Agricultura e Pecuária">Agricultura e Pecuária</option><option value="Alimentos e Bebidas">Alimentos e Bebidas</option><option value="Automotivo">Automotivo</option><option value="Comércio Atacado e Varejo">Comércio Atacado e Varejo</option><option value="Comércio Exterior">Comércio Exterior</option><option value="Construção Civil e Imobiliário">Construção Civil e Imobiliário</option><option value="Cooperativa de Produção">Cooperativa de Produção</option><option value="Couro e Calçados">Couro e Calçados</option><option value="Educação">Educação</option><option value="Energia">Energia</option><option value="Financeiro">Financeiro</option><option value="Madeira, Papel e Celulose">Madeira, Papel e Celulose</option><option value="Marketing e Comunicação">Marketing e Comunicação</option><option value="Metal Mecânico e Metalurgia">Metal Mecânico e Metalurgia</option><option value="Móveis">Móveis</option><option value="Plástico e Borracha">Plástico e Borracha</option><option value="Química e Petroquímica">Química e Petroquímica</option><option value="Saúde">Saúde</option><option value="Serviços">Serviços</option><option value="Serviços Públicos">Serviços Públicos</option><option value="Siderurgia e Mineração">Siderurgia e Mineração</option><option value="Tecnologia da Informação">Tecnologia da Informação</option><option value="Telecom">Telecom</option><option value="Têxtil e Confecções">Têxtil e Confecções</option><option value="Transporte e Logística">Transporte e Logística</option><option value="Turismo">Turismo</option><option value="Veterinário">Veterinário</option><option value="Outro">Outro</option> </select> -->
+
+<style>
+    .sendButton:hover span{
+        @apply translate-x-1
+    }
+</style>
