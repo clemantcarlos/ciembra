@@ -5,13 +5,13 @@ import Pill from '../components/Pill.astro';
 import Whatsapp from '../components/icons/Whatsapp.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import Footer from '../components/Footer.astro'
-import RightArrow from '../components/icons/RightArrow.astro';
+import ArrowButton from '../components/common/ArrowButton.astro';
 ---
 
-<Layout title="siembra.co">
-    <Section id='inicio' classList='flex flex-col lg:flex-row py-20 lg:py-40 px-10 lg:px-4'>
+<Layout title="ciembra co.">
+    <Section id='inicio' classList='flex flex-col lg:flex-row pt-40 px-10'>
         <article class="lg:w-2/3">
-            <h2 class="text-5xl text-pretty text-primary font-bold mb-4">
+            <h2 class="text-4xl lg:text-5xl text-pretty text-primary font-bold mb-4">
                 Transformamos tus ideas en productos digitales de impacto
             </h2>
             <p class="lg:block text-pretty">
@@ -30,8 +30,8 @@ import RightArrow from '../components/icons/RightArrow.astro';
         <span class="text-sm bg-primary text-secondary rounded-full px-3 py-1 mt-2">
             SERVICIOS</span>
         </span>
-        <h2 class="text-5xl font-black py-4">Lo que ofrecemos</h2>
-        <p class="w-full text-xl">
+        <h2 class="text-3xl lg:text-5xl font-black py-4">Lo que ofrecemos</h2>
+        <p class="w-full lg:text-xl">
             Reunimos las mejores prácticas para guiar a nuestros clientes en sus desafíos de creación y desarrollo de software de forma ágil, incremental y colaborativa.
         </p>
         <ServiceCard 
@@ -73,8 +73,8 @@ import RightArrow from '../components/icons/RightArrow.astro';
             }
         ]}/>
     </Section>
-    <section id='contacto' class='w-full flex flex-col text-primary pt-10 m-0'>
-        <div class="w-full flex items-center gap-x-6 px-10">
+    <section id='contacto' class='w-full flex flex-col  text-primary pt-40 m-0'>
+        <div class="w-full flex flex-col md:flex-row items-start md:items-center gap-x-6 px-10">
             <span class="text-sm bg-primary text-secondary rounded-full px-3 py-1 mt-2">
                 CONTACTO
             </span>
@@ -82,8 +82,8 @@ import RightArrow from '../components/icons/RightArrow.astro';
                 ¿Hablemos de tus proyectos?
             </h2>
         </div>
-        <article class="w-full flex justify-between bg-primary text-secondary py-14 px-10 mt-4 ">
-            <p class="w-full lg:w-1/3 text-lg text-pretty">
+        <article class="w-full flex flex-col lg:flex-row items-start gap-y-4 justify-between bg-primary text-secondary py-10 md:py-14 px-10 md:mt-4">
+            <p class="w-full lg:w-1/2 text-lg lg:text-xl text-pretty font-medium lg:px-10">
                 ¿Quiere saber más sobre cómo trabajamos, hablar sobre sus desafíos o hacer preguntas? Habla con nosotros. ¡Nos encanta intercambiar ideas sobre productos digitales!
                 <br><br>
                 Ponte en contacto y conoce la forma suave de desarrollar software.
@@ -301,14 +301,12 @@ import RightArrow from '../components/icons/RightArrow.astro';
                     </label>
                 </div>
                 <div class="w-full pl-10 pt-4">
-                    <button class="flex items-center px-4 py-2 text-xl font-bold bg-secondary text-primary rounded-full sendButton" type="submit">
-                        <span class="rounded-full bg-primary mr-4 text-secondary transition-all">
-                            <RightArrow />
-                        </span> 
-                        Enviar
-                    </button>
+                    <ArrowButton type='submit' label='ENviar'/>
                 </div>
             </form>
+            <div class="lg:hidden">
+                <ArrowButton type='button' label='Contactanos!'/>
+            </div>
         </article>
     </section>
     <Footer>
