@@ -35,6 +35,7 @@ import ServiceCard from '../components/ServiceCard.astro';
         <ServiceCard 
             title='Estrategia de diseño' 
             text='Diseñamos soluciones únicas y centradas en el usuario que den como resultado productos viables con un alto poder de participación. Respaldamos todo, desde la investigación hasta el lanzamiento de su solución con nuestras capacidades avanzadas de diseño y estrategia.'
+            redirect='DisenioTransformacion'
             nav={[ 
                 { 
                     text: 'Diseño para la transformación digital', 
@@ -50,31 +51,32 @@ import ServiceCard from '../components/ServiceCard.astro';
                 }
             ]}/>
         <ServiceCard 
-        title='Desarrollo de software' 
-        text='Entrega valor a tus clientes de forma ágil e incremental, en continua interacción con los usuarios y el mercado. Desarrollar y modernizar aplicaciones, plataformas, sistemas y soluciones de datos con equipos multidisciplinarios o outsourcing.'
-        nav={[ 
-            { 
-                text: 'Desarrollo de software', 
-                ref:'desarrolloSoftware' 
-            },
-            { 
-                text: 'Soporte de software', 
-                ref:'soporteSoftware' 
-            },
-            { 
-                text: 'Modernizacion de software', 
-                ref:'modernizacionSoftware' 
-            },
-            {
-                text: 'Outsourcing', 
-                ref:'outsourcing'
-            }
-        ]}/>
+            title='Desarrollo de software' 
+            text='Entrega valor a tus clientes de forma ágil e incremental, en continua interacción con los usuarios y el mercado. Desarrollar y modernizar aplicaciones, plataformas, sistemas y soluciones de datos con equipos multidisciplinarios o outsourcing.'
+            redirect='desarrolloSoftware'
+            nav={[ 
+                {   
+                    text: 'Desarrollo de software', 
+                    ref:'desarrolloSoftware' 
+                },
+                { 
+                    text: 'Soporte de software', 
+                    ref:'soporteSoftware' 
+                },
+                { 
+                    text: 'Modernizacion de software', 
+                    ref:'modernizacionSoftware' 
+                },
+                {
+                    text: 'Outsourcing', 
+                    ref:'outsourcing'
+                }
+            ]}/>
     </Section>
 </Layout>
 
 <style>
-    .sendButton:hover span{
-        @apply translate-x-1
-    }
+.sendButton:hover span{
+    @apply translate-x-1
+}
 </style>

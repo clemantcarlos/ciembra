@@ -1,19 +1,20 @@
 ---
 import ArrowButton from './common/ArrowButton.astro';
 interface Item{
-    text:string;
-    classList?:string;
-    ref:string;
+    text: string;
+    classList?: string;
+    ref: string;
 }
 
 interface Props{
     title?: string;
     text?: string;
     nav: Array <Item>;
+    redirect?: string;
 }
 
 
-const { title, text, nav }= Astro.props 
+const { title, text, nav, redirect }= Astro.props 
 ---
 <article class="w-full flex flex-col md:flex-row bg-primary text-secondary rounded p-6 my-4">
     <div class="w-full md:w-1/2">
@@ -29,6 +30,6 @@ const { title, text, nav }= Astro.props
         ))}
     </nav>
     <div class="w-full pt-4 md:hidden">
-       <ArrowButton label="mas informacion" type='button'/>
+       <ArrowButton anchor={true} label="mas informacion" ref={redirect} type='button'/>
     </div>
 </article>
