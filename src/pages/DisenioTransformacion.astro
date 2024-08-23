@@ -5,39 +5,49 @@ import Rocket from '../components/icons/Rocket.astro'
 import Box from '../components/icons/Box.astro'
 import Pill from '../components/Pill.astro';
 import Whatsapp from '../components/icons/Whatsapp.astro';
+
+const header = [
+    {label:'Inicio',ref:'#top'},
+    {label:'Overview', ref:'#overview'},
+    {label:'Uso', ref:'#Uso'},
+    {label:'Proceso', ref:'#Proceso'},
+    {label:'Contacto', ref:'#contacto'}
+]
 ---
-<Layout title="ciembra">
-    <article class="w-2/3 my-10 p-10 bg-primary text-secondary relative">
-        <h1 class="text-6xl font-bold pr-20">
+<Layout title="ciembra" header={header}>
+    <article class="w-2/3 my-20 lg:my-10 p-10 bg-primary text-secondary relative">
+        <h1 class="text-3xl lg:text-6xl font-bold lg:pr-20">
             Estrategia de diseño para la transformacion digital
         </h1>
-        <h2 class="text-3xl font-medium text-primary bg-emerald-300 w-fit my-10 py-2 pl-8 mr-20">
+        <h2 class="w-fit text-normal lg:text-3xl font-medium text-primary bg-emerald-300 
+            my-4 lg:my-10 lg:mr-20 py-2 px-4 lg:px-0 lg:pl-8">
             Repensar procesos y sistemas con nuevas tecnologías
         </h2>
-        <p class="text-2xl pr-20 text-pretty">
+        <p class="text-sm lg:text-2xl lg:pr-20 text-pretty">
             Crearemos sistemas, aplicaciones y procesos, haciendo que su empresa sea más digital, eficiente y productiva. Prepárate para invertir en tecnología de manera estratégica, con una visión clara del futuro y una hoja de ruta priorizada.
         </p>
         <div class="flex items-start mt-4">
             <Pill href="https://wa.me/584122010421?text=Me%20gustaria%20obtener%20mas%20informacion%20de%20sus%20servicios" 
             id="whatsappPill">
-                Contacta con un especialista
+                <span class="lg:hidden">Contacta</span>
+                <span class="hidden lg:flex">Contacta con un especialista</span>
                 <Whatsapp class="size-6 "/>
             </Pill>
         </div>
     </article>
-    <section class="flex p-10">
-        <div class="w-1/2 pr-2">
+    <section id="overview" class="flex flex-col lg:flex-row px-10 pt-40">
+        <div class="w-full lg:w-1/2 pr-2">
             <header class="w-full flex flex-col items-start gap-y-4">
                 <span class="text-sm bg-primary text-secondary rounded-full px-3 py-1 mt-2">
                     OVERVIEW
                 </span>
-                <h2 class="text-5xl text-pretty text-primary font-bold">
+                <h2 class="text-3xl lg:text-5xl text-pretty text-primary font-bold">
                     Transformamos tus ideas en productos digitales de impacto
                 </h2>
-                <span class="w-4/5 border-b-4 border-primary"></span>
+                <span class="w-full lg:w-4/5 border-b-4 border-primary"></span>
             </header>
         </div>
-        <ol class="w-1/2 relative border-s-2 border-primary pr-36">                  
+        <ol class="w-full lg:w-1/2 relative border-s-2 border-primary lg:pr-36 mt-10 lg:mt-0">                  
             <li class="ms-4">
                 <div class="absolute size-5 bg-secondary rounded-full mt-1 -start-2.5 border-2 border-primary ">
                 </div>
@@ -53,7 +63,7 @@ import Whatsapp from '../components/icons/Whatsapp.astro';
                 <div class="absolute size-5 bg-secondary rounded-full mt-1 -start-2.5 border-2 border-primary ">
                 </div>
                 <h3 class="text-3xl leading-none font-bold text-primary mb-2">
-                    Y tu empresa lo lograra:
+                    Y tu empresa lograra:
                 </h3>
                 <li class="list-disc text-primary ml-8 mb-1">
                     Asertividad para diseñar la solución adecuada a sus usuarios y objetivos de negocio.
@@ -67,43 +77,43 @@ import Whatsapp from '../components/icons/Whatsapp.astro';
             </li>
         </ol>
     </section>
-    <section class="w-full px-10 py-20 flex flex-wrap items-center justify-between">
-        <header class="w-full flex items-center gap-x-4 mb-6">
+    <section id="Uso" class="w-full px-10 pt-28 flex flex-wrap justify-between">
+        <header class="w-full flex flex-col lg:flex-row items-start lg:items-center gap-x-4 mb-6">
             <span class="text-sm bg-primary text-secondary rounded-full px-3 py-1 mt-2">
                 CASOS DE USO
             </span>
-            <h2 class="text-5xl text-pretty text-primary font-bold">
-                El Diseño Idel Para Tu Negocio
+            <h2 class="text-3xl lg:text-5xl text-pretty text-primary font-bold mt-4 lg:mt-0">
+                El Diseño Ideal Para Tu Negocio
             </h2>
         </header>
-        <article class="w-1/4 text-primary">
+        <article class="w-full lg:w-1/4 text-primary mb-10 lg:mb-0">
             <Code/>
             <h3 class="text-2xl my-2 font-bold">Digitalizar Procesos</h3>
             <p class="text-normal text-pretty">
                 Transforme los procesos operativos eliminando controles manuales en Excel y comunicaciones por correo electrónico. Con Concepción, planificaremos cómo eliminar los obstáculos que impiden el crecimiento.
             </p>
         </article>
-        <article class="w-1/4 text-primary">
+        <article class="w-full lg:w-1/4 text-primary mb-10 lg:mb-0">
             <Rocket/>
-            <h3 class="text-2xl my-2 font-bold">Digitalizar Procesos</h3>
+            <h3 class="text-2xl my-2 font-bold">Modernizar sistemas</h3>
             <p class="text-normal text-pretty">
-                Transforme los procesos operativos eliminando controles manuales en Excel y comunicaciones por correo electrónico. Con Concepción, planificaremos cómo eliminar los obstáculos que impiden el crecimiento.
+                Diseñe el futuro de sus sistemas heredados, haciéndolos más ágiles, escalables y efectivos, mientras mejora la experiencia de sus usuarios.
             </p>
         </article>
-        <article class="w-1/4 text-primary">
+        <article class="w-full lg:w-1/4 text-primary mb-10 lg:mb-0">
             <Box/>
-            <h3 class="text-2xl my-2 font-bold">Digitalizar Procesos</h3>
+            <h3 class="text-2xl my-2 font-bold">Evolucion de la comunicacion</h3>
             <p class="text-normal text-pretty">
-                Transforme los procesos operativos eliminando controles manuales en Excel y comunicaciones por correo electrónico. Con Concepción, planificaremos cómo eliminar los obstáculos que impiden el crecimiento.
+                Los canales de contacto obsoletos generan una baja satisfacción y un aumento de las tasas de abandono. Nosotros, planificaremos cómo mejorar la usabilidad, accesibilidad y experiencia de usuario de estos canales.
             </p>
         </article>
     </section>
-    <section class="w-full pt-20 px-10">
-        <header class="w-full flex items-center gap-x-4">
+    <section id="Proceso" class="w-full pt-28 px-10">
+        <header class="w-full flex flex-col lg:flex-row items-start lg:items-center gap-x-4">
             <span class="text-sm bg-primary text-secondary rounded-full px-3 py-1 mt-2">
                 PROCESO
             </span>
-            <h2 class="text-5xl text-pretty text-primary font-bold">
+            <h2 class="text-3xl lg:text-5xl text-pretty text-primary font-bold mt-4">
                 Diseño del Producto
             </h2>
         </header>
@@ -111,12 +121,12 @@ import Whatsapp from '../components/icons/Whatsapp.astro';
             <h3 class="w-full font-bold text-3xl mb-2">
                 1. Investigación
             </h3>
-            <p class="w-1/2 font-medium pr-10 text-pretty">
+            <p class="w-full lg:w-1/2 font-medium lg:pr-10 text-pretty">
                 El diseño comienza con el mapeo en profundidad de los procesos existentes, identificando cuellos de botella y fricciones. La encuesta puede incluir entrevistas y observación con empleados, clientes y socios.
                 <br>
                 También se utilizan técnicas de investigación para generar nuevos conocimientos: mediante estudios comparativos o análisis de tendencias podemos evaluar nuevas soluciones.
             </p>
-            <ul class="w-1/2 flex flex-col justify-between gap-y-4 text-xl font-medium pl-10">
+            <ul class="w-full lg:w-1/2 flex flex-col justify-between gap-y-4 text-xl font-medium pl-10">
                 <li class="list-disc">
                     Entrevistas.
                 </li>
@@ -135,12 +145,12 @@ import Whatsapp from '../components/icons/Whatsapp.astro';
             <h3 class="w-full font-bold text-3xl mb-2">
                 2. Opciones estratégicas
             </h3>
-            <p class="w-1/2 font-medium pr-10 text-pretty">
+            <p class="w-full lg:w-1/2 font-medium lg:pr-10 text-pretty">
                 Basándonos en investigaciones y conocimientos, se nos ocurrieron múltiples opciones de solución.
                 <br>
                 Un taller de design thinking reúne a todas las áreas para discutir las opciones y elegir los caminos a seguir, en función del apetito de innovación de la empresa.
             </p>
-            <ul class="w-1/2 flex flex-col justify-between gap-y-2 text-xl font-medium pl-10">
+            <ul class="w-full lg:w-1/2 flex flex-col justify-between gap-y-2 text-xl font-medium pl-6 lg:pl-10 mt-4 lg:mt-0">
                 <li class="list-disc">
                     Design thinking.
                 </li>
@@ -162,10 +172,10 @@ import Whatsapp from '../components/icons/Whatsapp.astro';
             <h3 class="w-full font-bold text-3xl mb-2">
                 3. Diseño de la solución
             </h3>
-            <p class="w-1/2 font-medium pr-10 text-pretty">
+            <p class="w-full lg:w-1/2 font-medium lg:pr-10 text-pretty">
                 Las soluciones priorizadas se materializan con el diseño de flujos y prototipos. De esta manera, los participantes de Conception pueden discutir el proceso TO-BE en profundidad y brindar comentarios para mejorar las ideas. En esta etapa también analizamos las opciones tecnológicas, las integraciones y la viabilidad tecnológica.
             </p>
-            <ul class="w-1/2 flex flex-col justify-between gap-y-2 text-xl font-medium pl-10">
+            <ul class="w-full lg:w-1/2 flex flex-col justify-between gap-y-2 text-xl font-medium pl-6 lg:pl-10 mt-4 lg:mt-0">
                 <li class="list-disc">
                     Wireframes y prototipos.
                 </li>
@@ -190,11 +200,11 @@ import Whatsapp from '../components/icons/Whatsapp.astro';
             <h3 class="w-full font-bold text-3xl mb-2">
                 4. Roadmap
             </h3>
-            <p class="w-1/2 font-medium pr-10 text-pretty">
+            <p class="w-full lg:w-1/2 font-medium lg:pr-10 text-pretty">
                 En un taller de planificación, desmenuzamos el producto para que usted tenga una hoja de ruta estratégica y sepa por dónde empezar con su MVP. <br>
                 Para productos innovadores, con incertidumbres de mercado o tecnológicas, también identificamos las principales hipótesis y elaboramos un plan de experimentación, de modo que se reduzcan los riesgos antes del desarrollo.
             </p>
-            <ul class="w-1/2 flex flex-col justify-between gap-y-2 text-xl font-medium pl-10">
+            <ul class="w-full lg:w-1/2 flex flex-col justify-between gap-y-2 text-xl font-medium pl-6 lg:pl-10 mt-4 lg:mt-0">
                 <li class="list-disc">
                     División y priorización de productos.
                 </li>

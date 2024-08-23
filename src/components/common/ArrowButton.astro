@@ -3,17 +3,30 @@ import RightArrow from '../icons/RightArrow.astro';
 
 interface Props{
     label:string;
-    type: 'submit' | 'reset' | 'button' | undefined | null;
+    type?: 'submit' | 'reset' | 'button' | undefined | null;
+    anchor?:boolean;
+    ref?:string;
 }
 
-const { label, type} = Astro.props
+const { label, type, anchor, ref} = Astro.props
 ---
-<button class="flex items-center px-4 py-2 text-xl font-bold bg-secondary text-primary rounded-full sendButton" type={type}>
-    <span class="rounded-full bg-primary mr-4 text-secondary transition-all">
-        <RightArrow  class="size-8"/>
-    </span> 
-    {label}
-</button>
+{ anchor 
+    ? <a class="w-fit flex items-center px-4 py-2 text-xl font-bold bg-secondary text-primary rounded-full sendButton" 
+        type={type} 
+        href={ref}>
+        <span class="rounded-full bg-primary mr-4 text-secondary transition-all">
+            <RightArrow  class="size-8"/>
+        </span> 
+        {label}
+    </a> 
+    : <button class="flex items-center px-4 py-2 text-xl font-bold bg-secondary text-primary rounded-full sendButton" type={type}>
+        <span class="rounded-full bg-primary mr-4 text-secondary transition-all">
+            <RightArrow  class="size-8"/>
+        </span> 
+        {label}
+    </button>
+}
+
 <style>
     .sendButton:hover span{
         @apply translate-x-1
