@@ -1,11 +1,72 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PageHero from '../components/PageHero.astro'
+import Layout from '@/layouts/Layout.astro';
+import PageHero from '@/components/PageHero.astro'
+import Card from '@/components/desarolloSoftware/Card.astro';
+
+// COMMON COMPONENTS
+import HeaderBadge from '@/common/HeaderBadge.astro';
+import Accordion from '@/common/Accordion.astro';
+
+// ICONS
+import Shop from '@/icons/Shop.astro';
+import Braces from '@/icons/Braces.astro'
+import Design from '@/icons/Design.astro'
+import Clock from '@/icons/Clock.astro'
+
+const header = [
+    {label:'Equipos', ref:'#equipos'},
+    {label:'Uso', ref:'#Uso'},
+    {label:'Proceso', ref:'#Proceso'},
+    {label:'Contacto', ref:'#contacto'}
+]
 ---
 
-<Layout title='ciembra'>
+<Layout title='ciembra' header={header}>
     <PageHero 
         title='Desarrollo de Software_' 
         subTitle='Creamos soluciones que generan resultados'
         text='Entregamos soluciones digitales con foco en innovación y gestión de valor. Además de desarrollo de software, entregamos estrategia, método y resultados en aplicaciones, sistemas y plataformas digitales.'/>
+    <section id='equipos' class='section'> 
+        <HeaderBadge badgeLabel='DESARROLLO DE SOFTWARE' 
+            title='Equipos Multidisciplinarios'
+            className='flex-col md:flex-row items-start md:items-center gap-4 mb-4'/>
+        <div class="w-5/12 ">
+            <Card title='Estrategia de producto' 
+                text='Creamos una estrategia enfocada en maximizar el valor del producto, para asi cumplir las metas y objetivos comerciales.'>
+                <Shop class="size-full"/>
+            </Card>
+        </div>
+        <div class="w-5/12">
+            <Card title='Tecnologia' 
+                text='Contamos con expertos en arquitectura, infraestructura y cloud para crear las mejores soluciones y trabajar en proyectos tecnológicos desafiantes.'>
+                <Braces class="size-full"/>
+            </Card>
+        </div>
+        <div class="w-5/12">
+            <Card title='Diseño' 
+                text='Nuestro equipo tiene experiencia en UX Design y UI Design, lo que nos permite crear soluciones centradas en el usuario que ofrecen una buena usabilidad.'>
+                <Design class="size-full"/>
+            </Card>
+        </div>
+        <div class="w-5/12">
+            <Card title='Agilidad' 
+                text='Trabajamos para garantizar un proceso transparente y adaptativo con entregas frecuentes, aumentando la velocidad del equipo con cada mejora.'>
+                <Clock class="size-full" />
+            </Card>
+        </div>
+    </section>
+    <section id="Soluciones" class="section">
+        <HeaderBadge badgeLabel='TIPOS DE PRODUCTOS' 
+            title='Soluciones digitales transformadoras'
+            className='flex-col md:flex-row items-start md:items-center gap-4 mb-4'/>
+
+        <Accordion title='LISTA'/>
+        <Accordion title='LISTA'/>
+    </section>
 </Layout>
+
+<style>
+    .section{
+        @apply w-full flex flex-wrap px-10 pt-36 gap-4 justify-center
+    }
+</style>
