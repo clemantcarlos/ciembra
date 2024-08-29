@@ -2,11 +2,10 @@
 import Layout from '@/layouts/Layout.astro';
 import PageHero from '@/components/PageHero.astro'
 import Card from '@/components/desarolloSoftware/Card.astro';
-
 // COMMON COMPONENTS
 import HeaderBadge from '@/common/HeaderBadge.astro';
-import Accordion from '@/common/Accordion.astro';
-
+import AccordionItem from '@/components/common/AccordionItem';
+import Accordion from '@/components/common/Accordion';
 // ICONS
 import Shop from '@/icons/Shop.astro';
 import Braces from '@/icons/Braces.astro'
@@ -26,7 +25,7 @@ const header = [
         title='Desarrollo de Software_' 
         subTitle='Creamos soluciones que generan resultados'
         text='Entregamos soluciones digitales con foco en innovación y gestión de valor. Además de desarrollo de software, entregamos estrategia, método y resultados en aplicaciones, sistemas y plataformas digitales.'/>
-    <section id='equipos' class='section'> 
+    <section id='equipos' class='section pt-36'> 
         <HeaderBadge badgeLabel='DESARROLLO DE SOFTWARE' 
             title='Equipos Multidisciplinarios'
             className='flex-col md:flex-row items-start md:items-center gap-4 mb-4'/>
@@ -55,18 +54,38 @@ const header = [
             </Card>
         </div>
     </section>
-    <section id="Soluciones" class="section">
+    <section id="Soluciones" class="section pt-40 pb-72">
         <HeaderBadge badgeLabel='TIPOS DE PRODUCTOS' 
             title='Soluciones digitales transformadoras'
             className='flex-col md:flex-row items-start md:items-center gap-4 mb-4'/>
-
-        <Accordion title='LISTA'/>
-        <Accordion title='LISTA'/>
+        <div class="w-full relative">
+            <Accordion>
+                <AccordionItem title="Aplicaciones Moviles" 
+                    text='Creamos aplicaciones utilizando tecnologías nativas o híbridas. Trabajamos en el desarrollo rápido de software para probar el negocio y en la evolución hacia arquitecturas más robustas.' 
+                    client:visible/>
+                <AccordionItem title="Software Personalizados" 
+                    text='Desarrollamos soluciones a medida para automatizar procesos, transformar servicios manuales en digitales, mejorar la gestión, aumentar las ventas o integrar software de terceros.' 
+                    client:visible/>
+                <AccordionItem title="Plataformas SASS y APIs" 
+                    text='Trabajamos en la construcción de plataformas escalables y de alto rendimiento para cumplir con las previsiones de alto crecimiento.' 
+                    client:visible/>
+                <AccordionItem title="Mantenimiento" 
+                    text='Realizamos mantenimiento y evolución de software personalizado, entregando constantes mejoras y nuevas funcionalidades a los usuarios.' 
+                    client:visible/>
+            </Accordion>
+            <picture>
+                <img loading="lazy" 
+                  class="h-full absolute top-0 right-0"
+                  decoding="async" 
+                  src="/img/desarrolloSoftware1.jpg" 
+                  alt="Desarrollo de Software – Soluciones Digitales - Ciembra"  />
+            </picture>
+        </div>
     </section>
 </Layout>
 
 <style>
     .section{
-        @apply w-full flex flex-wrap px-10 pt-36 gap-4 justify-center
+        @apply w-full flex flex-wrap px-10  gap-4 justify-center
     }
 </style>

@@ -3,11 +3,23 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [ "src/*" ],
-      "@/layouts/*": [ "src/layouts/*" ],
-      "@/components/*": [ "src/components/*" ],
-      "@/icons/*": [ "src/components/icons/*" ],
-      "@/common/*": [ "src/components/common/*" ]
-    }
+      "@/*": [
+        "src/*"
+      ],
+      "@/layouts/*": [
+        "src/layouts/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/icons/*": [
+        "src/components/icons/*"
+      ],
+      "@/common/*": [
+        "src/components/common/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
