@@ -1,7 +1,9 @@
-export default function Accordion ( props: any ){
+import AccordionItem from "./AccordionItem"
+import { AccordionItems as items } from "@/lib/text"
+export default function Accordion (  ){
   return(
     <div className="w-full absolute">
-      {props.children}
+      { items.map( ( {title, text} ) => <AccordionItem title={title} text={text} /> )}
     </div>
   )
 }
