@@ -1,9 +1,5 @@
 import { useState } from "react"
-
-interface AccordionProps extends React.ComponentPropsWithoutRef<"article">{
-  title:string;
-  text?:string;
-}
+import { type AccordionItem } from "@/interface/interfaces"
 
 function RightArrow( props?:any ){
   return(
@@ -24,13 +20,13 @@ function RightArrow( props?:any ){
   )
 }
 
-export default function AccordionItem ( props: AccordionProps){
+export default function AccordionItem ( props: AccordionItem){
 
   const [ active, setActive ] = useState<boolean>(false)
   const { title, text } = props
   
   return(
-    <article className="w-1/2 text-primary">
+    <article className="w-1/2 text-primary my-4 pr-20">
       <header onClick={ () => setActive(!active) } 
         className="flex items-center  hover:cursor-pointer">
         <h3 className="text-2xl font-semibold bg-secondary z-10">{title}</h3>

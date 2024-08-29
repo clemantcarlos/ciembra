@@ -16,7 +16,7 @@ const { header } = Astro.props
     bg-secondary text-primary
     font-bold`}>
     <a href="/">
-        <img src="/img/logoPrimary.png" class="w-14 absolute ml-10 top-0 left-0" alt="">
+        <img src="/img/logoPrimary.png" class="w-14 absolute ml-10 top-0 left-0 z-[999]" alt="">
     </a>
     {!header ? (
         <ul id="navMenu" class="flex w-full items-center justify-center 
@@ -34,7 +34,7 @@ const { header } = Astro.props
     )
     :(
         <button id="toggleMenu"
-            class="grid md:hidden place-items-center absolute top-0 right-0 
+            class="grid md:hidden place-items-center absolute top-0 right-4 
                 size-20 z-20
                 hover:cursor-pointer">
                 <div class="w-16 h-2 grid place-items-center

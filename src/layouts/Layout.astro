@@ -24,7 +24,7 @@ const { title,header } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
-		<Header header={header}></Header>
+		<Header header={header} client:load></Header>
 		<slot />
 		<Footer></Footer>
 	</body>
