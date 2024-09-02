@@ -18,60 +18,74 @@ const { header } = Astro.props
     <a href="/">
         <img src="/img/logoPrimary.png" class="w-14 absolute ml-10 top-0 left-0 z-[999]" alt="">
     </a>
-    {!header ? (
-        <ul id="navMenu" class="flex w-full items-center justify-center 
-            gap-x-4 p-4">
-            <a href="#inicio" class="nav-item">
-                Inicio
-            </a>
-            <a href="#servicios" class="nav-item">
-                Servicios
-            </a>
-            <a href="#contacto" class="nav-item">
-                Contacto
-            </a>
-        </ul>
-    )
-    :(
-        <button id="toggleMenu"
-            class="grid md:hidden place-items-center absolute top-0 right-4 
-                size-20 z-20
-                hover:cursor-pointer">
-                <div class="w-16 h-2 grid place-items-center
-                    bg-primary rounded-full transition-all duration-150 
-                    before:content-[''] before:absolute before:w-16 before:h-2 before:bg-primary before:rounded-full before:-translate-y-4 before:transition-all before:duration-150 
-                    after:content-[''] after:absolute after:w-16 after:h-2 after:bg-primary after:rounded-full after:translate-y-4 after:transition-all after:duration-150">
-                </div>
-        </button>
-        <ul id="navMenu" class="w-full md:hidden h-screen bg-secondary
-            flex flex-col items-center justify-start gap-8 px-4 pt-20 transition-all toggle">
-            { header.map(({label,ref}) => <a href={ref} class="nav-item navToggle text-3xl">{label}</a> )}
-        </ul>
-        <ul id="navMenu" class="hidden md:flex w-full items-center justify-center 
-            gap-8 p-4 transition-all">
-            {header.map(({label,ref})=>(
-                <a href={ref} class="nav-item">{label}</a>
-            ))}
-        </ul>
-    )}
-
+    <astro-burger>
+        {!header ? (
+            <ul data-navMenu class="flex w-full items-center justify-center 
+                gap-x-4 p-4">
+                <a href="#inicio" class="nav-item">
+                    Inicio
+                </a>
+                <a href="#servicios" class="nav-item">
+                    Servicios
+                </a>
+                <a href="#contacto" class="nav-item">
+                    Contacto
+                </a>
+            </ul>
+        )
+        :(
+            <button data-toggleMenu
+                class="grid md:hidden place-items-center absolute top-0 right-4 
+                    size-20 z-20
+                    hover:cursor-pointer">
+                    <div class="w-16 h-2 grid place-items-center
+                        bg-primary rounded-full transition-all duration-150 
+                        before:content-[''] before:absolute before:w-16 before:h-2 before:bg-primary before:rounded-full before:-translate-y-4 before:transition-all before:duration-150 
+                        after:content-[''] after:absolute after:w-16 after:h-2 after:bg-primary after:rounded-full after:translate-y-4 after:transition-all after:duration-150">
+                    </div>
+            </button>
+            <ul class="w-full md:hidden h-screen bg-secondary
+                flex flex-col items-center justify-start gap-8 px-4 pt-20 transition-all toggle">
+                { header.map(({label,ref}) => <a href={ref} class="nav-item navToggle text-3xl">{label}</a> )}
+            </ul>
+            <ul class="hidden md:flex w-full items-center justify-center 
+                gap-8 p-4 transition-all">
+                {header.map(({label,ref})=>(
+                    <a href={ref} class="nav-item">{label}</a>
+                ))}
+            </ul>
+        )}
+    </astro-burger>
 </header>
 <script>
-    const burger = document.getElementById('toggleMenu')
-    const nav = document.getElementById('navMenu')
+    class AstroBurger extends HTMLElement{
+        constructor(){
+            super();
 
-    window.addEventListener('click', (e:any)=>{
-        if(e.target.matches('.navToggle')){
-            burger?.classList.toggle("hamburger-toggle")
-            nav?.classList.toggle("toggle")
+            const burger = this.querySelector('button')
+            const navs = this.querySelectorAll('ul')
+            const navItems = this.querySelectorAll('ul a')
+
+            burger?.addEventListener('click', ()=> {
+                burger.classList.toggle("hamburger-toggle")
+                navs.forEach((nav)=>{
+                    nav.classList.toggle("toggle")
+                })
+            })
+            navItems.forEach((item)=>{
+                item.addEventListener('click',(e:any)=>{
+                    if(e.target.matches('.navToggle')){
+                        burger?.classList.toggle("hamburger-toggle")
+                        navs.forEach((nav)=>{
+                            nav?.classList.toggle("toggle")
+                        })
+                    }
+                })
+            })
         }
-    })
-        
-    burger?.addEventListener('click', ()=> {
-        console.log('a')
-        burger.classList.toggle("hamburger-toggle")
-        nav?.classList.toggle("toggle")
-    })
+    }
+
+    customElements.define('astro-burger', AstroBurger);
 </script>
 <style>
     .nav-item{
