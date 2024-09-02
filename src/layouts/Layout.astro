@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.astro';
+import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions'
 import {type HeaderNav} from '../interface/interfaces.ts'
 
 
@@ -24,7 +24,7 @@ const { title,header } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
-		<Header header={header} client:load></Header>
+		<Header header={header}></Header>
 		<slot />
 		<Footer></Footer>
 	</body>
