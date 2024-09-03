@@ -6,7 +6,7 @@ interface Props{
 const { header } = Astro.props
 ---
 <header class={!header ? `
-    w-full min-[5dvh]
+    w-full min-h-[5dvh]
     sticky top-0 z-10
     bg-secondary text-primary
     font-bold` 
@@ -19,7 +19,7 @@ const { header } = Astro.props
         <img src="/img/logoPrimary.png" 
             class="w-14 absolute ml-[5dvw] top-0 left-0 z-[999]" alt="">
     </a>
-    <astro-burger>
+    <astro-burger >
         {!header ? (
             <ul data-navMenu class="flex w-full items-center justify-center 
                 gap-x-4 p-4">
@@ -59,6 +59,7 @@ const { header } = Astro.props
     </astro-burger>
 </header>
 <script>
+    
     class AstroBurger extends HTMLElement{
         constructor(){
             super();
