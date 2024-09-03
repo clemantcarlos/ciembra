@@ -16,7 +16,8 @@ const { header } = Astro.props
     bg-secondary text-primary
     font-bold`}>
     <a href="/">
-        <img src="/img/logoPrimary.png" class="w-14 absolute ml-10 top-0 left-0 z-[999]" alt="">
+        <img src="/img/logoPrimary.png" 
+            class="w-14 absolute ml-[5dvw] top-0 left-0 z-[999]" alt="">
     </a>
     <astro-burger>
         {!header ? (
@@ -36,12 +37,12 @@ const { header } = Astro.props
         :(
             <button data-toggleMenu
                 class="grid md:hidden place-items-center absolute top-0 right-4 
-                    size-20 z-20
+                    size-16 z-20
                     hover:cursor-pointer">
-                    <div class="w-16 h-2 grid place-items-center
+                    <div class="w-12 h-2 grid place-items-center
                         bg-primary rounded-full transition-all duration-150 
-                        before:content-[''] before:absolute before:w-16 before:h-2 before:bg-primary before:rounded-full before:-translate-y-4 before:transition-all before:duration-150 
-                        after:content-[''] after:absolute after:w-16 after:h-2 after:bg-primary after:rounded-full after:translate-y-4 after:transition-all after:duration-150">
+                        before:content-[''] before:absolute before:w-12 before:h-2 before:bg-primary before:rounded-full before:-translate-y-4 before:transition-all before:duration-150 
+                        after:content-[''] after:absolute after:w-12 after:h-2 after:bg-primary after:rounded-full after:translate-y-4 after:transition-all after:duration-150">
                     </div>
             </button>
             <ul class="w-full md:hidden h-screen bg-secondary
