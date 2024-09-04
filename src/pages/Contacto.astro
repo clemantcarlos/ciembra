@@ -1,32 +1,53 @@
 ---
-import ArrowButton from "@/components/common/ArrowButton.astro"
+import ArrowButton from "@/common/ArrowButton.astro"
+import Card from "@/components/contacto/Card.astro"
+import Email from "@/icons/Email.astro"
 ---
-<section class="w-full h-[100dvh] flex p-6 bg-secondary">
-  <aside class="w-[40dvw]">
-    asdfasd
+<section class="w-full min-h-[100dvh] flex justify-center p-6 bg-secondary">
+  <aside class="hidden sm:flex flex-col w-[40dvw] text-primary">
+    <a href="/" class="flex items-center">
+      <img class="size-12" src="/img/logoPrimary.png" alt="">
+      <h2 class="text-xl font-bold mt-2">Ciembra</h2>
+    </a>
+    <Card
+      title="Envianos un correo!"
+      subtitle="Nuestro equipo siempre esta listo para ayudar."
+      strong="hi@ ciembra.com">
+      <Email  class="size-8 mr-6"/>
+    </Card>
+    <Card 
+      title="Llamanos!"
+      subtitle="Sabados a domingos de 8am a 5pm"
+      strong="+58 (412) 201-0421">
+      <Email  class="size-8 mr-6"/>
+    </Card>
   </aside>
-  <article class="bg-primary rounded-3xl px-6 py-10 text-secondary">
-    <h1 class="text-6xl m-0 font-semibold">
+  <article class="
+    w-full max-w-[400px] md:max-w-full
+    bg-primary 
+    rounded-3xl p-6 
+    text-secondary">
+    <h1 class="text-2xl m-0 font-semibold">
       Tienes alguna idea? Nosotros tenemos las habilidades, Hagamos equipo.
     </h1>
-    <strong>Dinos mas acerca de ti y sobre lo que tienes en mente.</strong>
-    <form class="w-[60dvw] flex flex-wrap justify-between  gap-4">
-        <div>
+    <strong class="text-sm font-normal">Dinos mas acerca de ti y sobre lo que tienes en mente.</strong>
+    <form class="w-full flex flex-wrap justify-between gap-4 pt-4">
+        <div class="w-full md:w-fit">
           <label for="nombre" 
             class="block font-medium ">
             Nombre completo*
           </label>
-          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" 
+          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none   w-full md:w-64 p-2.5" 
             required 
             type="text" 
             name="nombre" 
             id="">
         </div>
-        <div>
-          <label for="cargo" class="block font-medium ">
+        <div class="w-full flex flex-col md:w-fit">
+          <label for="cargo" class="font-medium w-full">
             Cargo*
           </label>
-          <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" name="Cargos" required="">
+          <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none w-full md:w-64 p-2.5" name="Cargos" required="">
               <option value="" disabled="" selected="" hidden=""></option>
               <option value="Director(a) de Tecnologia – IT">
                 Director de Tecnologia – IT
@@ -93,22 +114,22 @@ import ArrowButton from "@/components/common/ArrowButton.astro"
               </option> 
             </select>
         </div>
-        <div>
+        <div class="w-full md:w-fit">
           <label for="nombreEmpresa" 
             class="block font-medium ">
             Nombre de la empresa*
           </label>
-          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" 
+          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5" 
             type="text" 
             name="nombreEmpresa" 
             id="">
         </div>
-        <div>
+        <div class="w-full md:w-fit">
           <label for="areaMercado" 
             class="block font-medium ">
             Area de mercado*
           </label>
-          <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" name="mercado"  required="">
+          <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none w-full md:w-64 p-2.5" name="mercado"  required="">
             <option value="" disabled="" selected="" hidden=""></option>
             <option value="Agropecuario">
               Agropecuario
@@ -196,21 +217,21 @@ import ArrowButton from "@/components/common/ArrowButton.astro"
             </option> 
             </select>
         </div>
-        <div>
+        <div class="w-full md:w-fit">
           <label for="email" 
             class="block font-medium ">
             E-mail*
           </label>
-          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5" 
+          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5" 
             type="text" 
             name="email" 
             id="">
         </div>
-        <div>
+        <div class="w-full md:w-fit">
           <label for="telefono" class="block font-medium ">
             Telefono*
           </label>
-          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none block w-64 p-2.5"
+          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5"
             type="text" 
             name="telefono" 
             id="">

@@ -1,0 +1,16 @@
+---
+interface Props{
+  title:string;
+  subtitle:string;
+  strong:string;
+}
+const {title, subtitle, strong} = Astro.props
+---
+<article class="w-full px-4 mt-10 flex">
+  <slot/>
+  <div class="">
+    <h3 class="text-xl font-bold">{title}</h3>
+    <p>{subtitle}</p>
+    <strong class="font-semibold">{strong}</strong>
+  </div>
+</article>
