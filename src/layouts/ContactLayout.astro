@@ -1,0 +1,21 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="es" class="bg-secondary overflow-x-hidden w-screen">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/img/logoSecondary.png" />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
