@@ -1,251 +1,252 @@
 ---
+import ContactLayout from "@/layouts/ContactLayout.astro"
 import ArrowButton from "@/common/ArrowButton.astro"
 import Card from "@/components/contacto/Card.astro"
 import Email from "@/icons/Email.astro"
 ---
-<section class="w-full min-h-[100dvh] flex justify-center p-6 bg-secondary">
-  <aside class="hidden sm:flex flex-col w-[40dvw] text-primary">
-    <a href="/" class="flex items-center">
-      <img class="size-12" src="/img/logoPrimary.png" alt="">
-      <h2 class="text-xl font-bold mt-2">Ciembra</h2>
-    </a>
-    <Card
-      title="Envianos un correo!"
-      subtitle="Nuestro equipo siempre esta listo para ayudar."
-      strong="hi@ ciembra.com">
-      <Email  class="size-8 mr-6"/>
-    </Card>
-    <Card 
-      title="Llamanos!"
-      subtitle="Sabados a domingos de 8am a 5pm"
-      strong="+58 (412) 201-0421">
-      <Email  class="size-8 mr-6"/>
-    </Card>
-  </aside>
-  <article class="
-    w-full max-w-[400px] md:max-w-full
-    bg-primary 
-    rounded-3xl p-6 
-    text-secondary">
-    <h1 class="text-2xl m-0 font-semibold">
-      Tienes alguna idea? Nosotros tenemos las habilidades, Hagamos equipo.
-    </h1>
-    <strong class="text-sm font-normal">Dinos mas acerca de ti y sobre lo que tienes en mente.</strong>
-    <form class="w-full flex flex-wrap justify-between gap-4 pt-4">
-        <div class="w-full md:w-fit">
-          <label for="nombre" 
-            class="block font-medium ">
-            Nombre completo*
-          </label>
-          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none   w-full md:w-64 p-2.5" 
-            required 
-            type="text" 
-            name="nombre" 
-            id="">
-        </div>
-        <div class="w-full flex flex-col md:w-fit">
-          <label for="cargo" class="font-medium w-full">
-            Cargo*
-          </label>
-          <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none w-full md:w-64 p-2.5" name="Cargos" required="">
+<ContactLayout title="Contactanos!">
+  <main class="w-full h-[100dvh] grid place-items-center">
+    <section class="w-full h-fit my-auto flex justify-center p-6 bg-secondary">
+      <aside class="hidden sm:flex sm:flex-col w-[40dvw] text-primary">
+      <a href="/" class="flex items-center">
+        <img class="size-12" src="/img/logoPrimary.png" alt="">
+        <h2 class="text-xl font-bold mt-2">Ciembra</h2>
+      </a>
+      <Card
+        title="Envianos un correo!"
+        subtitle="Nuestro equipo siempre esta listo para ayudar."
+        strong="hi@ ciembra.com">
+        <Email  class="size-8 mr-6"/>
+      </Card>
+      <Card 
+        title="Llamanos!"
+        subtitle="Sabados a domingos de 8am a 5pm"
+        strong="+58 (412) 201-0421">
+        <Email  class="size-8 mr-6"/>
+      </Card>
+    </aside>
+    <article class="w-full max-w-[400px] h-fit md:max-w-full bg-primary rounded-3xl p-6 text-secondary">
+      <h1 class="text-2xl m-0 font-semibold">
+        Tienes alguna idea? Nosotros tenemos las habilidades, Hagamos equipo.
+      </h1>
+      <strong class="text-sm font-normal">Dinos mas acerca de ti y sobre lo que tienes en mente.</strong>
+      <form class="w-full flex flex-wrap justify-between gap-4 pt-4">
+          <div class="w-full md:w-fit">
+            <label for="nombre" 
+              class="block font-medium ">
+              Nombre completo*
+            </label>
+            <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-none   w-full md:w-64 p-2.5" 
+              required 
+              type="text" 
+              name="nombre" 
+              id="">
+          </div>
+          <div class="w-full flex flex-col md:w-fit">
+            <label for="cargo" class="font-medium w-full">
+              Cargo*
+            </label>
+            <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none w-full md:w-64 p-2.5" name="Cargos" required="">
+                <option value="" disabled="" selected="" hidden=""></option>
+                <option value="Director(a) de Tecnologia – IT">
+                  Director de Tecnologia – IT
+                </option>
+                <option value="Coordinador(a) de Tecnologia – IT">
+                  Coordinador(a) de Tecnologia – TI
+                </option>
+                <option value="Analista de Tecnologia – TI">
+                  Analista de Tecnologia – TI
+                </option>
+                <option value="Director(a) Comercial">
+                  Director(a) Comercial
+                </option>
+                <option value="Coordinador(a) Comercial">
+                  Coordinador(a) Comercial
+                </option>
+                <option value="Analista Comercial">
+                  Analista Comercial
+                </option>
+                <option value="Director(a) de Marketing">
+                  Director(a) de Marketing
+                </option>
+                <option value="Coordinador(a) de Marketing">
+                  Coordinador(a) de Marketing
+                </option>
+                <option value="Analista de Marketing">
+                  Analista de Marketing
+                </option>
+                <option value="Director(a) de Operaciones">
+                  Director(a) de Operaciones
+                </option>
+                <option value="Coordinador(a) de Operaciones">
+                  Coordinador(a) de Operaciones
+                </option>
+                <option value="Técnico de Operaciones">
+                  Técnico de Operaciones
+                </option>
+                <option value="Director(a) de Compras">
+                  Director(a) de Compras
+                </option>
+                <option value="Coordinador(a) de Compras">
+                  Coordinador(a) de Compras
+                </option>
+                <option value="Analista de Compras">
+                  Analista de Compras
+                </option>
+                <option value="Director(a) de Innovacion">
+                  Director(a) de Innovacion
+                </option>
+                <option value="Coordinador(a) de Innovacion">
+                  Coordinador(a) de Innovacion
+                </option>
+                <option value="Analista de Negocios">
+                  Analista de Negocios
+                </option>
+                <option value="CEO/Fundador/Socio">
+                  CEO/Fundador/Socio
+                </option>
+                <option value="Estudiante/Becario(a)">
+                  Estudiante/Becario(a)
+                </option>
+                <option value="Otros Cargos">
+                  Otros Cargos
+                </option> 
+              </select>
+          </div>
+          <div class="w-full md:w-fit">
+            <label for="nombreEmpresa" 
+              class="block font-medium ">
+              Nombre de la empresa*
+            </label>
+            <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5" 
+              type="text" 
+              name="nombreEmpresa" 
+              id="">
+          </div>
+          <div class="w-full md:w-fit">
+            <label for="areaMercado" 
+              class="block font-medium ">
+              Area de mercado*
+            </label>
+            <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none w-full md:w-64 p-2.5" name="mercado"  required="">
               <option value="" disabled="" selected="" hidden=""></option>
-              <option value="Director(a) de Tecnologia – IT">
-                Director de Tecnologia – IT
+              <option value="Agropecuario">
+                Agropecuario
               </option>
-              <option value="Coordinador(a) de Tecnologia – IT">
-                Coordinador(a) de Tecnologia – TI
+              <option value="Alimentos e Bebidas">
+                Alimentos e Bebidas
               </option>
-              <option value="Analista de Tecnologia – TI">
-                Analista de Tecnologia – TI
+              <option value="Automotor">
+                Automotor
               </option>
-              <option value="Director(a) Comercial">
-                Director(a) Comercial
+              <option value="Comercio mayorista y minorista">
+                Comercio mayorista y minorista
               </option>
-              <option value="Coordinador(a) Comercial">
-                Coordinador(a) Comercial
+              <option value="Comercio Exterior">
+                Comercio Exterior
               </option>
-              <option value="Analista Comercial">
-                Analista Comercial
+              <option value="Construccion civil e Imbobiliario">
+                Construccion civil e Imbobiliario
               </option>
-              <option value="Director(a) de Marketing">
-                Director(a) de Marketing
+              <option value="Cooperativa de Produccion">
+                Cooperativa de Produccion
               </option>
-              <option value="Coordinador(a) de Marketing">
-                Coordinador(a) de Marketing
+              <option value="Cuero y calzado">
+                Cuero y calzado
               </option>
-              <option value="Analista de Marketing">
-                Analista de Marketing
+              <option value="Educacion">
+                Educacion
               </option>
-              <option value="Director(a) de Operaciones">
-                Director(a) de Operaciones
+              <option value="Energia">
+                Energia
               </option>
-              <option value="Coordinador(a) de Operaciones">
-                Coordinador(a) de Operaciones
+              <option value="Financiero">
+                Financiero
               </option>
-              <option value="Técnico de Operaciones">
-                Técnico de Operaciones
+              <option value="Madera, papel y celulosa">
+                Madera, papel y celulosa
               </option>
-              <option value="Director(a) de Compras">
-                Director(a) de Compras
+              <option value="Marketing y Comunicacion">
+                Marketing y Comunicacion
               </option>
-              <option value="Coordinador(a) de Compras">
-                Coordinador(a) de Compras
+              <option value="Mecanica">
+                Mecanica
               </option>
-              <option value="Analista de Compras">
-                Analista de Compras
+              <option value="Muebles">
+                Muebles
               </option>
-              <option value="Director(a) de Innovacion">
-                Director(a) de Innovacion
+              <option value="Plastico y Caucho">
+                Plastico y Caucho
               </option>
-              <option value="Coordinador(a) de Innovacion">
-                Coordinador(a) de Innovacion
+              <option value="Química e Petroquímica">
+                Química e Petroquímica
               </option>
-              <option value="Analista de Negocios">
-                Analista de Negocios
+              <option value="Salud">
+                Salud
               </option>
-              <option value="CEO/Fundador/Socio">
-                CEO/Fundador/Socio
+              <option value="Servicios">
+                Servicios
               </option>
-              <option value="Estudiante/Becario(a)">
-                Estudiante/Becario(a)
+              <option value="Servicios Publicos">
+                Servicios Publicos
               </option>
-              <option value="Otros Cargos">
-                Otros Cargos
+              <option value="Metalurgia y Mineria">
+                Metalurgia y Mineria
+              </option>
+              <option value="Tecnologia de la Informacion">
+                Tecnologia de la Informacion
+              </option>
+              <option value="Telecom">
+                Telecom
+              </option>
+              <option value="Textil y confecciones">
+                Textil y confecciones
+              </option>
+              <option value="Transporte y Logistica">
+                Transporte y Logistica
+              </option>
+              <option value="Turismo">
+                Turismo
+              </option>
+              <option value="Veterinario">
+                Veterinario
+              </option>
+              <option value="Otro">
+                Otro
               </option> 
-            </select>
-        </div>
-        <div class="w-full md:w-fit">
-          <label for="nombreEmpresa" 
-            class="block font-medium ">
-            Nombre de la empresa*
-          </label>
-          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5" 
-            type="text" 
-            name="nombreEmpresa" 
-            id="">
-        </div>
-        <div class="w-full md:w-fit">
-          <label for="areaMercado" 
-            class="block font-medium ">
-            Area de mercado*
-          </label>
-          <select class="bg-secondary text-primary text-sm rounded-lg focus:ring-none w-full md:w-64 p-2.5" name="mercado"  required="">
-            <option value="" disabled="" selected="" hidden=""></option>
-            <option value="Agropecuario">
-              Agropecuario
-            </option>
-            <option value="Alimentos e Bebidas">
-              Alimentos e Bebidas
-            </option>
-            <option value="Automotor">
-              Automotor
-            </option>
-            <option value="Comercio mayorista y minorista">
-              Comercio mayorista y minorista
-            </option>
-            <option value="Comercio Exterior">
-              Comercio Exterior
-            </option>
-            <option value="Construccion civil e Imbobiliario">
-              Construccion civil e Imbobiliario
-            </option>
-            <option value="Cooperativa de Produccion">
-              Cooperativa de Produccion
-            </option>
-            <option value="Cuero y calzado">
-              Cuero y calzado
-            </option>
-            <option value="Educacion">
-              Educacion
-            </option>
-            <option value="Energia">
-              Energia
-            </option>
-            <option value="Financiero">
-              Financiero
-            </option>
-            <option value="Madera, papel y celulosa">
-              Madera, papel y celulosa
-            </option>
-            <option value="Marketing y Comunicacion">
-              Marketing y Comunicacion
-            </option>
-            <option value="Mecanica">
-              Mecanica
-            </option>
-            <option value="Muebles">
-              Muebles
-            </option>
-            <option value="Plastico y Caucho">
-              Plastico y Caucho
-            </option>
-            <option value="Química e Petroquímica">
-              Química e Petroquímica
-            </option>
-            <option value="Salud">
-              Salud
-            </option>
-            <option value="Servicios">
-              Servicios
-            </option>
-            <option value="Servicios Publicos">
-              Servicios Publicos
-            </option>
-            <option value="Metalurgia y Mineria">
-              Metalurgia y Mineria
-            </option>
-            <option value="Tecnologia de la Informacion">
-              Tecnologia de la Informacion
-            </option>
-            <option value="Telecom">
-              Telecom
-            </option>
-            <option value="Textil y confecciones">
-              Textil y confecciones
-            </option>
-            <option value="Transporte y Logistica">
-              Transporte y Logistica
-            </option>
-            <option value="Turismo">
-              Turismo
-            </option>
-            <option value="Veterinario">
-              Veterinario
-            </option>
-            <option value="Otro">
-              Otro
-            </option> 
-            </select>
-        </div>
-        <div class="w-full md:w-fit">
-          <label for="email" 
-            class="block font-medium ">
-            E-mail*
-          </label>
-          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5" 
-            type="text" 
-            name="email" 
-            id="">
-        </div>
-        <div class="w-full md:w-fit">
-          <label for="telefono" class="block font-medium ">
-            Telefono*
-          </label>
-          <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5"
-            type="text" 
-            name="telefono" 
-            id="">
-        </div>
-        <div class="w-full pl-10 pt-4">
-          <input type="checkbox" name="privacidad" id="privacidad"/>
-          <label for="privacidad">
-            Estoy deacuerdo con las 
-            <a href="politicasPrivacidad" class="font-bold text-emerald-300">Politicas de Privacidad</a>
-          </label>
-        </div>
-        <div class="w-full pl-10 pt-4">
-            <ArrowButton type='submit' label='Enviar'/>
-        </div>
-    </form>
-  </article>
-</section>
+              </select>
+          </div>
+          <div class="w-full md:w-fit">
+            <label for="email" 
+              class="block font-medium ">
+              E-mail*
+            </label>
+            <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5" 
+              type="text" 
+              name="email" 
+              id="">
+          </div>
+          <div class="w-full md:w-fit">
+            <label for="telefono" class="block font-medium ">
+              Telefono*
+            </label>
+            <input class="bg-secondary text-primary text-sm rounded-lg focus:ring-non w-full md:w-64 p-2.5"
+              type="text" 
+              name="telefono" 
+              id="">
+          </div>
+          <div class="w-full pl-10 pt-4">
+            <input type="checkbox" name="privacidad" id="privacidad"/>
+            <label for="privacidad">
+              Estoy deacuerdo con las 
+              <a href="politicasPrivacidad" class="font-bold text-emerald-300">Politicas de Privacidad</a>
+            </label>
+          </div>
+          <div class="w-full pl-10 pt-4">
+              <ArrowButton type='submit' label='Enviar'/>
+          </div>
+      </form>
+    </article>
+    </section>
+  </main>
+</ContactLayout>
