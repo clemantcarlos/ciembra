@@ -35,7 +35,7 @@ export default function FooterForm({ children }:any) {
           <option
             value=""
             disabled={false}
-            selected={false}
+            
             hidden={false}
           ></option>
           <option value="Director(a) de Tecnologia – IT">
@@ -107,7 +107,7 @@ export default function FooterForm({ children }:any) {
           <option
             value=""
             disabled={false}
-            selected={false}
+            
             hidden={false}
           ></option>
           <option value="Agropecuario">Agropecuario</option>
@@ -176,7 +176,7 @@ export default function FooterForm({ children }:any) {
           id=""
         />
       </div>
-      <div className="w-full pl-10 pt-4">
+      {/* <div className="w-full pl-10 pt-4">
         <input required type="checkbox" name="privacidad" id="privacidad" />
         <label htmlFor="privacidad">
           Estoy deacuerdo con las
@@ -184,7 +184,7 @@ export default function FooterForm({ children }:any) {
             Politicas de Privacidad
           </a>
         </label>
-      </div>
+      </div> */}
       <div className="w-full pl-10 pt-4">
         {children}
       </div>

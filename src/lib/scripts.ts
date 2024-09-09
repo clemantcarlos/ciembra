@@ -1,4 +1,7 @@
 export const submitHandler = (e:any) =>{
+  e.preventDefault()
+  console.log(e)
+
   const form = e.target
   const formData = new FormData(form)
   const object = Object.fromEntries(formData);
@@ -12,7 +15,14 @@ export const submitHandler = (e:any) =>{
     },
     body: json
   })
-  .then(async (response) => await response.json())
+  .then( async response => {
+    console.log(response)
+    await response.json()
+  })
   .catch(error => { console.log(error) })
-  .then(() => { form.reset() });
+  .finally(() => { form.reset() });
 }
+
+export const mobileSubmitHandler = (e:any) =>{
+  console.log(e)
+} 

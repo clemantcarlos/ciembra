@@ -1,6 +1,6 @@
 ---
 import ContactLayout from "@/layouts/ContactLayout.astro"
-import PageForm from "@/components/common/PageForm.tsx"
+import PageForm from "@/common/PageForm.tsx"
 import ArrowButton from "@/common/ArrowButton.astro"
 import Card from "@/components/contacto/Card.astro"
 import Email from "@/icons/Email.astro"
@@ -31,9 +31,9 @@ import Email from "@/icons/Email.astro"
         Tienes alguna idea? Nosotros tenemos las habilidades, Hagamos equipo.
       </h1>
       <strong class="text-sm font-normal">Dinos mas acerca de ti y sobre lo que tienes en mente.</strong>
-      <PageForm>
-        <ArrowButton anchor={true} 
-          ref="/Contacto" 
+      <PageForm client:visible>
+        <ArrowButton  
+          type='submit'
           label='Contactanos!'/>
       </PageForm>
     </article>
