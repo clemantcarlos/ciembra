@@ -1,54 +1,44 @@
-# Astro Starter Kit: Basics
+# 🌱 CIEMBRA - Digital Product Development
 
-```sh
-npm create astro@latest -- --template basics
-```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/ciembra/deploys)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+This is the official repository for the CIEMBRA landing page. The site presents CIEMBRA as a company that builds high-impact digital products, combining strategic design with excellent software development.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The live site is available at: [ciembra.netlify.app](https://ciembra.netlify.app/)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 📝 About the Project
 
-## 🚀 Project Structure
+CIEMBRA’s core philosophy is to turn ideas into impactful digital products. The company offers a comprehensive, end-to-end process that is agile, incremental, and collaborative[reference:1].
 
-Inside of your Astro project, you'll see the following folders and files:
+The website effectively communicates this value proposition through a clean, single-page layout, focusing on two primary service areas:
+*   **Design Strategy:** Creating unique, user-centered solutions that result in viable products with high engagement potential[reference:2].
+*   **Software Development:** Delivering value to clients in an agile and incremental manner, utilizing multidisciplinary teams or outsourcing for application and data solution modernization[reference:3].
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+The site ends with a call to action, inviting potential clients to get in touch and "conoce la forma suave de desarrollar software" (get to know the smooth way to develop software)[reference:4].
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## ✨ Key Features
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+*   **Responsive Design:** The site is fully responsive and adapts smoothly to various screen sizes (desktop, tablet, and mobile).
+*   **Modern, Minimalist UI:** A clean and professional aesthetic that focuses on content readability and trust-building.
+*   **Strategic Copywriting:** The text is crafted to clearly highlight the company's value proposition and expertise.
+*   **Call to Action:** A prominent and well-located contact section encourages user engagement.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🛠️ Built With
 
-## 🧞 Commands
+*   **HTML5:** Semantic markup for content structure.
+*   **CSS3:** Modern styling techniques (Flexbox/Grid) for layout and responsiveness.
+*   **JavaScript (Vanilla):** For interactive elements and dynamic features.
 
-All commands are run from the root of the project, from a terminal:
+## 🚀 Getting Started
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+To get a local copy up and running, follow these simple steps.
 
-## 👀 Want to learn more?
+### Prerequisites
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+You need a modern web browser and a text editor (like VS Code).
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/your-username/ciembra-landing.git
