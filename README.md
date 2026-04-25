@@ -28,17 +28,3 @@ The site ends with a call to action, inviting potential clients to get in touch 
 *   **HTML5:** Semantic markup for content structure.
 *   **CSS3:** Modern styling techniques (Flexbox/Grid) for layout and responsiveness.
 *   **JavaScript (Vanilla):** For interactive elements and dynamic features.
-
-## 🚀 Getting Started
-
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
-You need a modern web browser and a text editor (like VS Code).
-
-### Installation
-
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/your-username/ciembra-landing.git
