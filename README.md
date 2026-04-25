@@ -27,4 +27,4 @@ The site ends with a call to action, inviting potential clients to get in touch 
 
 *   **HTML5:** Semantic markup for content structure.
 *   **CSS3:** Modern styling techniques (Flexbox/Grid) for layout and responsiveness.
-*   **JavaScript (Vanilla):** For interactive elements and dynamic features.
+*   **Astro + Typescript:** For interactive elements and dynamic features.
