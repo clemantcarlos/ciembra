@@ -1,28 +1,110 @@
-# 🌱 CIEMBRA - Digital Product Development
+<div align="center">
 
-This is the official repository for the CIEMBRA landing page. The site presents CIEMBRA as a company that builds high-impact digital products, combining strategic design with excellent software development.
+🌱 Ciembra — Landing Page
 
-The live site is available at: [ciembra.netlify.app](https://ciembra.netlify.app/)
+Official landing page for CIEMBRA, a digital product development company
 
-## 📝 About the Project
+[!TypeScript](https://www.typescriptlang.org/)
+[!Astro](https://astro.build/)
+[!React](https://react.dev/)
+[!Tailwind CSS](https://tailwindcss.com/)
+[!License](LICENSE)
 
-CIEMBRA’s core philosophy is to turn ideas into impactful digital products. The company offers a comprehensive, end-to-end process that is agile, incremental, and collaborative[reference:1].
+</div>
 
-The website effectively communicates this value proposition through a clean, single-page layout, focusing on two primary service areas:
-*   **Design Strategy:** Creating unique, user-centered solutions that result in viable products with high engagement potential[reference:2].
-*   **Software Development:** Delivering value to clients in an agile and incremental manner, utilizing multidisciplinary teams or outsourcing for application and data solution modernization[reference:3].
+> 🌐 Live at [ciembra.netlify.app](https://ciembra.netlify.app)
 
-The site ends with a call to action, inviting potential clients to get in touch and "conoce la forma suave de desarrollar software" (get to know the smooth way to develop software)[reference:4].
+***
 
-## ✨ Key Features
+## 📋 About the Project
 
-*   **Responsive Design:** The site is fully responsive and adapts smoothly to various screen sizes (desktop, tablet, and mobile).
-*   **Modern, Minimalist UI:** A clean and professional aesthetic that focuses on content readability and trust-building.
-*   **Strategic Copywriting:** The text is crafted to clearly highlight the company's value proposition and expertise.
-*   **Call to Action:** A prominent and well-located contact section encourages user engagement.
+Ciembra is the official landing page for CIEMBRA, a digital product development company focused on design strategy and software development. Built with Astro and React, it features a modern minimalist UI with responsive design and strategic copywriting to communicate CIEMBRA's value proposition.
 
-## 🛠️ Built With
+## ✨ Features
 
-*   **HTML5:** Semantic markup for content structure.
-*   **CSS3:** Modern styling techniques (Flexbox/Grid) for layout and responsiveness.
-*   **Astro + Typescript:** For interactive elements and dynamic features.
+| Feature | Description |
+|---------|-------------|
+| Modern Design | Clean, minimalist UI with smooth animations |
+| Responsive | Fully responsive across all device sizes |
+| React Components | Interactive elements with React 18 |
+| Tailwind CSS | Utility-first styling for rapid development |
+| Netlify Deployed | Optimized for Netlify hosting |
+
+## 🏗️ Architecture
+
+```
+ciembra/
+├── src/
+│   ├── components/   # Astro and React components
+│   ├── interfaces/   # TypeScript interfaces
+│   ├── layouts/      # Page layouts
+│   ├── lib/          # Utility libraries
+│   └── pages/        # Route pages
+├── astro.config.mjs  # Astro configuration
+├── tailwind.config.mjs
+├── package.json
+└── tsconfig.json
+```
+
+## 🛠️ Tech Stack
+
+- **Framework:** Astro 4 with React integration
+- **UI Library:** React 18
+- **Styling:** Tailwind CSS 3
+- **Language:** TypeScript
+- **Deployment:** Netlify
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- pnpm >= 9
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/ciembra.git
+cd ciembra
+
+# Install dependencies
+pnpm install
+```
+
+### Running the Application
+
+```bash
+pnpm start         # Start development server
+pnpm build         # Build for production
+pnpm preview       # Preview production build
+```
+
+## 📦 Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `pnpm start` | Start Astro dev server |
+| `pnpm build` | Type-check and build for production |
+| `pnpm preview` | Preview production build |
+| `pnpm astro` | Run Astro CLI commands |
+
+## 📄 License
+
+This project is licensed under the MIT License. See LICENSE for more details.
+
+***
+
+## 👤 Author
+
+**Carlos Clemant**
+
+[!GitHub](https://github.com/your-username)
+[!LinkedIn](https://linkedin.com/in/your-profile)
+
+***
+<div align="center">
+
+If you found this project helpful, give it a ⭐!
+
+</div>
