@@ -1,7 +1,5 @@
 # 🌱 CIEMBRA - Digital Product Development
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/ciembra/deploys)
-
 This is the official repository for the CIEMBRA landing page. The site presents CIEMBRA as a company that builds high-impact digital products, combining strategic design with excellent software development.
 
 The live site is available at: [ciembra.netlify.app](https://ciembra.netlify.app/)
